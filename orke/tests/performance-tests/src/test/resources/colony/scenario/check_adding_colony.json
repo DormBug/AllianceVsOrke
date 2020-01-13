@@ -1,0 +1,60 @@
+{
+  "scenarioName" : "Check colony list, add colony, check colony list again, change colony info, check colony list again",
+  "steps" :[
+    {
+      "name" : "first_check_colony_list",
+      "url" : "/orke/colony/all",
+      "operation" : "GET",
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application/json;charset=UTF-8"
+        }
+      },
+      "assertions" : {
+        "status" : 200,
+        "headers" : {
+          "Date" : "$NOT.NULL",
+          "Transfer-Encoding" : [ "chunked" ],
+          "Content-Type" : [ "application/json" ]
+        },
+        "body" : []
+      }
+    },
+    {
+      "name" : "add_new_colony",
+      "url" : "/orke/colony/add",
+      "operation" : "PUT",
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application/json;charset=UTF-8"
+        },
+        "body" : {
+          "name" : "Marlia",
+          "populationCount" : 320
+        }
+      },
+      "assertions" : {
+        "status" : 204
+      }
+    },
+    {
+      "name" : "second_check_colony_name",
+      "url" : "/orke/colony/all",
+      "operation" : "GET",
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application/json;charset=UTF-8"
+        }
+      },
+      "assertions" : {
+        "status" : 200,
+        "body" : [
+          {
+            "name" : "Marlia",
+            "populationCount" : 320
+          }
+        ]
+      }
+    }
+  ]
+}

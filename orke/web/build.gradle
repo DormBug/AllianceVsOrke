@@ -1,0 +1,6 @@
+description=':orke:web'
+
+dependencies {
+    compile 'org.springframework:spring-web'
+    compile project(':orke:backend-logic:colony:colony-api')
+}

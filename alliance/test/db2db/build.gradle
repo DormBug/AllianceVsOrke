@@ -1,0 +1,5 @@
+description=':alliance:test:db2db'
+
+dependencies {
+    compile 'junit:junit'
+}

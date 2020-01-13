@@ -1,0 +1,6 @@
+description=':alliance:web'
+
+dependencies {
+    compile 'org.springframework.cloud:spring-cloud-starter-consul'
+    compile 'org.springframework:spring-web'
+}

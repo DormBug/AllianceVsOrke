@@ -1,0 +1,5 @@
+description=':alliance:test:integration'
+
+dependencies {
+    compile 'junit:junit'
+}

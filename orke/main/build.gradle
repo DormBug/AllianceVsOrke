@@ -1,0 +1,31 @@
+description=':orke:main'
+
+dependencies {
+    // For checking micro-service-health by Consul
+//    compile 'io.micrometer:micrometer-core'
+//    compile 'org.springframework.boot:spring-boot-actuator-autoconfigure'
+
+    // Download necessary classes
+    compile 'org.hibernate:hibernate-core'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+//    compile 'org.springframework.cloud:spring-cloud-commons'
+    compile 'org.springframework.data:spring-data-jpa'
+
+    // Starting and connection to Consul by port 8500
+//    compile 'org.springframework.cloud:spring-cloud-consul-discovery'
+//    compile 'org.springframework.cloud:spring-cloud-netflix-core'
+//    compile 'org.springframework.cloud:spring-cloud-starter-consul'
+//    compile 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'
+//    compile 'joda-time:joda-time'
+
+    // MariaDb connecting
+    compile 'ch.vorburger.mariaDB4j:mariaDB4j'
+    compile 'org.mariadb.jdbc:mariadb-java-client'
+    
+    // Connect components
+    compile project(':orke:web')
+    compile project(':orke:domain')
+    compile project(':orke:backend-logic:colony:colony-api')
+    compile project(':orke:backend-logic:colony:colony-service')
+    compile project(':orke:common-config')
+}

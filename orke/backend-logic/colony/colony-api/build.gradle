@@ -1,0 +1,8 @@
+description=':orke:backend-logic:colony:colony-api'
+
+dependencies {
+    compile 'org.mapstruct:mapstruct'
+    compile 'org.mapstruct:mapstruct-processor'
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8'
+    compile project(':orke:domain')
+}

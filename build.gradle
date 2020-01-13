@@ -1,0 +1,20 @@
+plugins {
+	id 'io.spring.dependency-management' version '1.0.6.RELEASE' apply false
+}
+
+def javaProjects() { return subprojects.findAll { it.file("build.gradle").exists() } }
+
+configure(javaProjects()) {
+	apply plugin: 'java'
+	apply from: "$rootProject.projectDir/gradle/dependencies.gradle"
+	
+	group = 'com.war'
+	version = '6.5.0-SNAPSHOT'
+	
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+
+	tasks.withType(JavaCompile) {
+		options.encoding = 'UTF-8'
+	}
+}

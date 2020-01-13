@@ -1,0 +1,13 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+*.target/
+/.idea
+/.gradle
+
+# Package Files #
+*.jar
+*.war

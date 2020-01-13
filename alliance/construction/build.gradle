@@ -1,0 +1,7 @@
+description=':alliance:construction'
+
+dependencies {
+    compile 'org.hibernate:hibernate-core'
+    
+    compile project(':alliance:enum:domain')
+}

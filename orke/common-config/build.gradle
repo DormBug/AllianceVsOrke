@@ -1,0 +1,13 @@
+description=':orke:common-config'
+
+dependencies {
+
+    // MariaDb connecting
+    compile 'ch.vorburger.mariaDB4j:mariaDB4j'
+    compile 'org.mariadb.jdbc:mariadb-java-client'
+
+    compile 'org.springframework.data:spring-data-jpa'
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
+    compile 'org.hibernate:hibernate-core'
+    compile 'com.google.guava:guava'
+}
