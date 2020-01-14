@@ -9,7 +9,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@PropertySource(value={"classpath:h2_datasource_application.properties"})
 @SpringBootApplication(scanBasePackages = {"com.war.orke"})
 @EntityScan(basePackages = {"com.war.orke.entity"})
 @EnableJpaRepositories(basePackages = {"com.war.orke.repository"})

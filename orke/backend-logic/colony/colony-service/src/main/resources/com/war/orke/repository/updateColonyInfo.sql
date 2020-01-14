@@ -1,6 +1,6 @@
 UPDATE
     colony
 SET
-    populationCount = :populationCount
+    Population_Count = :populationCount
 WHERE
-    `name` = :name
+    `Name` = :name

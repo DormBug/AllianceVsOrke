@@ -32,7 +32,6 @@ import java.util.stream.Stream;
 import static org.apiguardian.api.API.Status.EXPERIMENTAL;
 import static org.junit.jupiter.api.Assertions.fail;
 
-@API(status = EXPERIMENTAL)
 public class SpringApplicationParallelRunner implements BeforeAllCallback {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringApplicationParallelRunner.class);
