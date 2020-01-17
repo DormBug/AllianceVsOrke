@@ -2,7 +2,7 @@ package com.war.orke.service;
 
 import com.war.orke.dto.ColonyDto;
 import com.war.orke.mapper.ColonyMapper;
-import com.war.orke.repository.ColonyJdbcRepository;
+import com.war.orke.jdbcRepository.ColonyJdbcRepository;
 import com.war.orke.repository.ColonyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

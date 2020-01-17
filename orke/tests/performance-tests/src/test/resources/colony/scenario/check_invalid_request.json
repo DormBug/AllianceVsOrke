@@ -1,0 +1,45 @@
+{
+  "scenarioName" : "Check invalid request data for orke colony",
+  "steps" :[
+    {
+      "name" : "adding_new_colony_with_invalid_colony_population_count",
+      "url" : "/orke/colony/add",
+      "operation" : "PUT",
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application/json;charset=UTF-8"
+        },
+        "body" : {
+          "name" : "Alice"
+        }
+      },
+      "assertions" : {
+        "status" : 400,
+        "body" : {
+          "exception" : "Invalid data was entered",
+          "code" : 400
+        }
+      }
+    },
+    {
+      "name": "adding_new_colony_with_invalid_request_data",
+      "url": "/orke/colony/add",
+      "operation": "PUT",
+      "request": {
+        "headers": {
+          "Content-Type": "application/json;charset=UTF-8"
+        },
+        "body" : {
+          "code" : 123
+        }
+      },
+      "assertions": {
+        "status": 400,
+        "body": {
+          "exception": "Invalid data was entered",
+          "code": 400
+        }
+      }
+    }
+  ]
+}

@@ -3,6 +3,7 @@ package com.war.orke.dto;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.validation.constraints.NotNull;
 import java.math.BigInteger;
 import java.util.Objects;
 
@@ -10,7 +11,9 @@ public class ColonyDto {
 
     @JsonIgnore
     private Integer id;
+    @NotNull
     private BigInteger populationCount;
+    @NotNull
     private String name;
 
     @JsonIgnore

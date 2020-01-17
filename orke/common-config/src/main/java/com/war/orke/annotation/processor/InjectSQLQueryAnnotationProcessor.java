@@ -15,13 +15,13 @@ import java.net.URL;
 
 public class InjectSQLQueryAnnotationProcessor implements BeanPostProcessor {
 
-    private static final String DEFAULT_REPO_PACKAGE = "com.war.orke.repository";
+    private static final String DEFAULT_JDBC_REPO_PACKAGE = "com.war.orke.jdbcRepository";
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         Class<?> clazz = bean.getClass();
         String name = clazz.getName();
-        if (name.startsWith(DEFAULT_REPO_PACKAGE)) {
+        if (name.startsWith(DEFAULT_JDBC_REPO_PACKAGE)) {
             ReflectionUtils.doWithFields(clazz, field -> process(bean, field));
         }
         return bean;

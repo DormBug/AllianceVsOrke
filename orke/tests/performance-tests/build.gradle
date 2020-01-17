@@ -14,7 +14,8 @@ dependencies {
     testCompile 'org.jsmart:micro-simulator'
     testCompile 'org.springframework.boot:spring-boot-starter-jetty'
 
-    compile project(':orke:web')
+    compile project(':orke:web-parent:colony')
+    compile project(':orke:web-parent:common')
     compile project(':orke:domain')
     compile project(':orke:backend-logic:colony:colony-api')
     compile project(':orke:backend-logic:colony:colony-service')

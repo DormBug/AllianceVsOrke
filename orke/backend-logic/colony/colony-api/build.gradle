@@ -4,5 +4,6 @@ dependencies {
     compile 'org.mapstruct:mapstruct'
     compile 'org.mapstruct:mapstruct-processor'
     compile 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8'
+    compile 'javax.validation:validation-api'
     compile project(':orke:domain')
 }

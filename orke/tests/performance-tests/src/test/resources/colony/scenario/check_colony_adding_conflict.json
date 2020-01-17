@@ -1,0 +1,44 @@
+{
+  "scenarioName" : "Check colony adding conflict",
+  "steps" : [
+    {
+      "name" : "adding_colony_with_name_Garvard",
+      "url" : "/orke/colony/add",
+      "operation" : "PUT",
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application/json;charset=UTF-8"
+        },
+        "body" : {
+          "name" : "Garvard",
+          "populationCount" : 1100
+        }
+      },
+      "assertions" : {
+        "status" : 204,
+        "body" : []
+      }
+    },
+    {
+      "name" : "trying_to_add_colony_with_existing_name",
+      "url" : "/orke/colony/add",
+      "operation" : "PUT",
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application/json;charset=UTF-8"
+        },
+        "body" : {
+          "name" : "Garvard",
+          "populationCount" : 2200
+        }
+      },
+      "assertions" : {
+        "status" : 409,
+        "body" : {
+          "exception" : "field 'name' error message 'Colony with name 'Garvard' is already created'",
+          "code" : 409
+        }
+      }
+    }
+  ]
+}

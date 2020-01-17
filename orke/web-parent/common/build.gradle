@@ -1,0 +1,7 @@
+description=':orke:web-parent:colony'
+
+dependencies {
+    compile 'org.springframework:spring-web'
+    compile 'org.springframework:spring-aspects'
+    compile 'org.springframework.data:spring-data-jpa'
+}

@@ -69,6 +69,12 @@ dependencyManagement {
         dependency 'org.mapstruct:mapstruct-processor:1.3.0.Final'
         dependency 'com.google.guava:guava:28.1-jre'
         dependency 'org.springframework.boot:spring-boot-starter-jetty:2.2.2.RELEASE'
+        dependency 'javax.validation:validation-api:2.0.1.Final'
+
+        dependency 'org.aspectj:aspectjrt:1.7.4'
+        dependency 'org.aspectj:aspectjtools:1.7.4'
+        dependency 'org.aspectj:aspectjweaver:1.6.8'
+
 
 
 

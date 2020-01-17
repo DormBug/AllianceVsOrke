@@ -1,4 +1,4 @@
-package com.war.orke.repository;
+package com.war.orke.jdbcRepository;
 
 import com.war.orke.annotation.InjectSQLQuery;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import java.math.BigInteger;
 @Repository
 public class ColonyJdbcRepository {
 
-    @InjectSQLQuery("com/war/orke/repository/updateColonyInfo.sql")
+    @InjectSQLQuery("com/war/orke/jdbcRepository/updateColonyInfo.sql")
     private String updateColonyInfo;
 
     @Autowired

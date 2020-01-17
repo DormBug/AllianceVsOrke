@@ -25,6 +25,10 @@ public class Colony {
         return id;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public BigInteger getPopulationCount() {
         return populationCount;
     }
