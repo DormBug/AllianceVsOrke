@@ -4,7 +4,7 @@
     {
       "name" : "adding_new_colony_with_invalid_colony_population_count",
       "url" : "/orke/colony/add",
-      "operation" : "PUT",
+      "operation" : "POST",
       "request" : {
         "headers" : {
           "Content-Type" : "application/json;charset=UTF-8"
@@ -24,7 +24,7 @@
     {
       "name": "adding_new_colony_with_invalid_request_data",
       "url": "/orke/colony/add",
-      "operation": "PUT",
+      "operation": "POST",
       "request": {
         "headers": {
           "Content-Type": "application/json;charset=UTF-8"

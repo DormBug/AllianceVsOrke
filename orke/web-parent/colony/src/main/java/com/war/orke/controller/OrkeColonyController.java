@@ -6,8 +6,10 @@ import com.war.orke.validator.ColonyValidator;
 import com.war.orke.validator.DtoValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,7 +33,7 @@ public class OrkeColonyController {
         return orkeColonyService.getOrkeColonies();
     }
 
-    @PutMapping("/add")
+    @PostMapping("/add")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void addingNewColony(@RequestBody @Valid @DtoValidator(ColonyValidator.class) ColonyDto colonyDto) {
         orkeColonyService.addingNewColony(colonyDto);
@@ -42,5 +44,11 @@ public class OrkeColonyController {
     public void updateColonyInfo(@PathVariable("colonyName") String colonyName,
                                  @RequestParam("population") BigInteger population) {
         orkeColonyService.updateColonyInfo(colonyName, population);
+    }
+
+    @DeleteMapping("/delete/{colonyName}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteColony(@PathVariable(name = "colonyName") String colonyName) {
+        orkeColonyService.deleteColony(colonyName);
     }
 }

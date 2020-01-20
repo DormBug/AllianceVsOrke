@@ -12,4 +12,6 @@ public interface OrkeColonyService {
     void updateColonyInfo(String colonyName, BigInteger population);
 
     void addingNewColony(ColonyDto colonyDto);
+
+    void deleteColony(String colonyName);
 }

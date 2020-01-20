@@ -4,7 +4,7 @@
     {
       "name" : "adding_colony_with_name_Garvard",
       "url" : "/orke/colony/add",
-      "operation" : "PUT",
+      "operation" : "POST",
       "request" : {
         "headers" : {
           "Content-Type" : "application/json;charset=UTF-8"
@@ -22,7 +22,7 @@
     {
       "name" : "trying_to_add_colony_with_existing_name",
       "url" : "/orke/colony/add",
-      "operation" : "PUT",
+      "operation" : "POST",
       "request" : {
         "headers" : {
           "Content-Type" : "application/json;charset=UTF-8"
@@ -38,6 +38,19 @@
           "exception" : "field 'name' error message 'Colony with name 'Garvard' is already created'",
           "code" : 409
         }
+      }
+    },
+    {
+      "name" : "RollBack",
+      "url" : "/orke/colony/delete/Garvard",
+      "operation" : "DELETE",
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application/json;charset=UTF-8"
+        }
+      },
+      "assertions" : {
+        "status" : 204
       }
     }
   ]

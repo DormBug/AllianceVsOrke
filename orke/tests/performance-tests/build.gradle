@@ -4,7 +4,6 @@ dependencies {
 
     compile 'org.hibernate:hibernate-core'
     compile 'org.springframework.boot:spring-boot-starter-web'
-//    compile 'org.springframework.cloud:spring-cloud-commons'
     compile 'org.springframework.data:spring-data-jpa'
     compile 'com.h2database:h2'
     
@@ -20,6 +19,8 @@ dependencies {
     compile project(':orke:backend-logic:colony:colony-api')
     compile project(':orke:backend-logic:colony:colony-service')
     compile project(':orke:common-config')
-    
-//    compile project(':orke:main')
+}
+
+task PerformanceTesting(type: Test) {
+    include 'com/war/orke/colony/*LoadTest*'
 }

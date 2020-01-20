@@ -2,7 +2,6 @@ package com.war.orke.runner;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Maps;
-import org.apiguardian.api.API;
 import org.jsmart.zerocode.core.di.provider.ObjectMapperProvider;
 import org.jsmart.zerocode.core.domain.LoadWith;
 import org.jsmart.zerocode.core.domain.TestMapping;
@@ -87,7 +86,6 @@ public class SpringApplicationParallelRunner implements BeforeAllCallback {
     }
 
     private Map<Method, Boolean> runTestsByLoadProcessor(Map<Method, LoadProcessor> processors) throws InterruptedException {
-//        ExecutorService executorService = Executors.newWorkStealingPool();
         ExecutorService executorService = Executors.newFixedThreadPool(processors.size());
 
         List<Callable<Map.Entry<Method, Boolean>>> callables =

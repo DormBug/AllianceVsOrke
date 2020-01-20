@@ -35,9 +35,15 @@ public class OrkeColonyServiceImpl implements OrkeColonyService {
         colonyJdbcRepository.updateColonyInfo(colonyName, population);
     }
 
-    @Transactional
     @Override
+    @Transactional
     public void addingNewColony(ColonyDto colonyDto) {
         colonyRepository.save(colonyMapper.toOrkeColony(colonyDto));
+    }
+
+    @Override
+    @Transactional
+    public void deleteColony(String colonyName) {
+        colonyRepository.deleteColonyByName(colonyName);
     }
 }

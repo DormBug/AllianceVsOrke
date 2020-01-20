@@ -23,7 +23,7 @@
     {
       "name" : "add_new_colony",
       "url" : "/orke/colony/add",
-      "operation" : "PUT",
+      "operation" : "POST",
       "request" : {
         "headers" : {
           "Content-Type" : "application/json;charset=UTF-8"
@@ -48,12 +48,20 @@
       },
       "assertions" : {
         "status" : 200,
-        "body" : [
-          {
-            "name" : "Marlia",
-            "populationCount" : 320
-          }
-        ]
+        "body" : "$NOT.NULL"
+      }
+    },
+    {
+      "name" : "RollBack",
+      "url" : "/orke/colony/delete/Marlia",
+      "operation" : "DELETE",
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application/json;charset=UTF-8"
+        }
+      },
+      "assertions" : {
+        "status" : 204
       }
     }
   ]
