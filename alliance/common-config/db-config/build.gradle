@@ -1,7 +1,0 @@
-description=':alliance:common-config:db-config'
-
-dependencies {
-    compile 'org.apache.logging.log4j:log4j-to-slf4j'
-    compile 'org.apache.commons:commons-lang3'
-    compile 'org.hibernate:hibernate-core'
-}
