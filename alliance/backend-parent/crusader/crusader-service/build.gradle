@@ -1,0 +1,5 @@
+description=':alliance:backend-parent:crusader:crusader-service'
+
+dependencies {
+    compile project (':alliance:backend-parent:crusader:crusader-api')
+}

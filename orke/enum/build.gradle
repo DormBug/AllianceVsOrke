@@ -1,0 +1,6 @@
+description=':orke:enum'
+
+dependencies {
+    compile 'org.apache.commons:commons-lang3'
+    compile 'org.hibernate:hibernate-core'
+}

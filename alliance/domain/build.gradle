@@ -1,0 +1,5 @@
+description=':alliance:domain'
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+}

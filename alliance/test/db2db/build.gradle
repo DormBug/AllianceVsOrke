@@ -1,5 +1,5 @@
 description=':alliance:test:db2db'
 
 dependencies {
-    compile 'junit:junit'
+    testCompile 'org.junit.jupiter:junit-jupiter-api'
 }

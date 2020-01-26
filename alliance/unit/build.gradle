@@ -1,6 +1,0 @@
-description=':alliance:unit'
-
-dependencies {
-    compile 'org.hibernate:hibernate-core'
-    compile 'org.springframework.data:spring-data-jpa'
-}
