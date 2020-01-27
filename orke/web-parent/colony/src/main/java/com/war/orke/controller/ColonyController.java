@@ -23,7 +23,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/orke/colony")
-public class OrkeColonyController {
+public class ColonyController {
 
     @Autowired
     private ColonyService colonyService;
