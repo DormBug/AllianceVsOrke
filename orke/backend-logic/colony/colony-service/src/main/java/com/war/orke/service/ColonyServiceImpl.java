@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Service
-public class OrkeColonyServiceImpl implements OrkeColonyService {
+public class ColonyServiceImpl implements ColonyService {
 
     @Autowired
     private ColonyJdbcRepository colonyJdbcRepository;

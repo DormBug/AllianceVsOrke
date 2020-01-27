@@ -1,7 +1,7 @@
 package com.war.orke.controller;
 
 import com.war.orke.dto.ColonyDto;
-import com.war.orke.service.OrkeColonyService;
+import com.war.orke.service.ColonyService;
 import com.war.orke.validator.ColonyValidator;
 import com.war.orke.validator.DtoValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,29 +26,29 @@ import java.util.List;
 public class OrkeColonyController {
 
     @Autowired
-    private OrkeColonyService orkeColonyService;
+    private ColonyService colonyService;
 
     @GetMapping("/all")
     public List<ColonyDto> getColonies() {
-        return orkeColonyService.getOrkeColonies();
+        return colonyService.getOrkeColonies();
     }
 
     @PostMapping("/add")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void addingNewColony(@RequestBody @Valid @DtoValidator(ColonyValidator.class) ColonyDto colonyDto) {
-        orkeColonyService.addingNewColony(colonyDto);
+        colonyService.addingNewColony(colonyDto);
     }
 
     @PutMapping("/update/{colonyName}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void updateColonyInfo(@PathVariable("colonyName") String colonyName,
                                  @RequestParam("population") BigInteger population) {
-        orkeColonyService.updateColonyInfo(colonyName, population);
+        colonyService.updateColonyInfo(colonyName, population);
     }
 
     @DeleteMapping("/delete/{colonyName}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteColony(@PathVariable(name = "colonyName") String colonyName) {
-        orkeColonyService.deleteColony(colonyName);
+        colonyService.deleteColony(colonyName);
     }
 }
