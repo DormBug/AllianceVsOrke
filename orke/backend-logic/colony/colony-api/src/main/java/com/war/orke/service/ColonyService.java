@@ -5,7 +5,7 @@ import com.war.orke.dto.ColonyDto;
 import java.math.BigInteger;
 import java.util.List;
 
-public interface OrkeColonyService {
+public interface ColonyService {
 
     List<ColonyDto> getOrkeColonies();
 

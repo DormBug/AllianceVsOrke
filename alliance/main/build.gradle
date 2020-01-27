@@ -1,7 +1,6 @@
 description=':alliance:main'
 
 dependencies {
-    
     compile project(':alliance:domain')
     compile project(':alliance:web')
 }

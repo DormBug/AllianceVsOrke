@@ -3,4 +3,6 @@ description=':orke:backend-logic:colony:colony-service'
 dependencies {
     compile project(':orke:backend-logic:colony:colony-api')
     compile project(':orke:common-config')
+    
+    testCompile 'org.mockito:mockito-junit-jupiter'
 }

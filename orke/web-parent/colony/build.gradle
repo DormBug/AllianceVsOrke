@@ -2,8 +2,15 @@ description=':orke:web-parent:colony'
 
 dependencies {
     compile 'org.springframework:spring-web'
-    
+
     compile project(':orke:domain')
     compile project(':orke:web-parent:common')
     compile project(':orke:backend-logic:colony:colony-api')
+    testCompile project (':orke:main')
+    testCompile project (':orke:backend-logic:colony:colony-api')
+
+    testCompile 'org.mockito:mockito-junit-jupiter'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+
+    testCompileClasspath 'org.springframework.boot:spring-boot-starter-web'
 }

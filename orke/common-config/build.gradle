@@ -10,4 +10,8 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-jdbc'
     compile 'org.hibernate:hibernate-core'
     compile 'com.google.guava:guava'
+    
+    testCompile 'org.junit.jupiter:junit-jupiter-api'
+    testCompile 'org.hibernate:hibernate-core'
+    testCompile 'org.mockito:mockito-junit-jupiter'
 }

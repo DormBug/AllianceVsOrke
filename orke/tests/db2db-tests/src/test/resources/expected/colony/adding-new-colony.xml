@@ -1,0 +1,23 @@
+<!DOCTYPE dataset SYSTEM "dataset.dtd">
+<dataset>
+    <table name="colony">
+        <column>Id</column>
+        <column>Population_Count</column>
+        <column>Name</column>
+        <row>
+            <value>2</value>
+            <value>1120</value>
+            <value>Moscow</value>
+        </row>
+        <row>
+            <value>3</value>
+            <value>320</value>
+            <value>Kiev</value>
+        </row>
+        <row>
+            <value>4</value>
+            <value>670</value>
+            <value>Yalta</value>
+        </row>
+    </table>
+</dataset>

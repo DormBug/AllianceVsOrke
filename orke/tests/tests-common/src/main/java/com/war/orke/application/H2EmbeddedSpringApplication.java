@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
@@ -20,7 +19,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EntityScan(basePackages = {"com.war.orke.entity"})
 @EnableJpaRepositories(basePackages = {"com.war.orke.repository"})
 @EnableScheduling
-@EnableAspectJAutoProxy
 public class H2EmbeddedSpringApplication {
 
     private static final Logger LOG = LoggerFactory.getLogger(H2EmbeddedSpringApplication.class);
@@ -33,5 +31,4 @@ public class H2EmbeddedSpringApplication {
     public static void start() {
         SpringApplication.run(H2EmbeddedSpringApplication.class);
     }
-
 }

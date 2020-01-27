@@ -1,0 +1,15 @@
+description=':orke:tests:tests-common'
+
+dependencies {
+    compile 'org.hibernate:hibernate-core'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.data:spring-data-jpa'
+    compile 'com.h2database:h2'
+    
+    compile project(':orke:domain')
+    compile project(':orke:backend-logic:colony:colony-api')
+    compile project(':orke:backend-logic:colony:colony-service')
+    compile project(':orke:common-config')
+    compile project(':orke:web-parent:colony')
+    compile project(':orke:web-parent:common')
+}

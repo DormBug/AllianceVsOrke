@@ -1,0 +1,9 @@
+description=':orke:tests:db2db-tests'
+
+dependencies {
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'org.junit.jupiter:junit-jupiter-api'
+    testCompile 'org.dbunit:dbunit'
+   
+    testCompile project (':orke:tests:tests-common')
+}
