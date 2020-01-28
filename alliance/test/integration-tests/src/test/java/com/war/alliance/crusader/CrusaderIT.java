@@ -13,6 +13,7 @@ import reactor.core.publisher.Mono;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@Deprecated // module 'alliance' is now reactive and this integration tests need to be updated
 public class CrusaderIT {
 
     private static final String CRUSADER_NAME = "Yellow";
