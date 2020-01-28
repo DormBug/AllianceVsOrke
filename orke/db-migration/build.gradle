@@ -1,0 +1,32 @@
+description=':orke:db-migration'
+
+apply plugin: "org.liquibase.gradle"
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "org.liquibase:liquibase-gradle-plugin:2.0.2"
+    }
+}
+
+liquibase {
+    activities {
+        main {
+            changeLogFile 'src/main/resources/db/сhangelog-master.xml'
+            url 'jdbc:mariadb://localhost:3307/orke'
+            referenceUrl 'jdbc:mariadb://localhost:3307/orke'
+            username 'root'
+            password 'root'
+        }
+    }
+}
+
+dependencies {
+    liquibaseRuntime 'org.liquibase:liquibase-core'
+    liquibaseRuntime 'org.liquibase:liquibase-groovy-dsl'
+    liquibaseRuntime 'org.mariadb.jdbc:mariadb-java-client'
+}
