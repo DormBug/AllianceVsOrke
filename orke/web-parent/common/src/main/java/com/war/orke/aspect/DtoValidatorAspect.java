@@ -13,6 +13,17 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Parameter;
 import java.util.Objects;
 
+/**
+ * By using this aspect we can annotate some object or collection of objects by {@link DtoValidator}
+ * and add in value our custom validator class, which implemented {@link org.springframework.validation.Validator}.
+ * It very useful to control returned object from one API to another and write checks by object's values not in
+ * business logic, but in another place named 'validation'.
+ *
+ * In our project perfect place for this annotating is controllers.
+ *
+ * @see DtoValidator
+ * @see org.springframework.validation.Validator
+ * */
 @Aspect
 @Component
 public class DtoValidatorAspect {

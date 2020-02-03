@@ -9,13 +9,15 @@
         <sqlFile path="init/init_data.sql" relativeToChangelogFile="true"/>
     </changeSet>
 
-    <!--
-        Some changeSets, that will be in the future
-    -->
-
-    <changeSet id="Adding New Default Colony" author="Vlad">
+    <changeSet id="Adding New Default Colony with Name Budapesht" author="Vlad">
         <sql>
-            INSERT IGNORE INTO `colony` (`Id`, `Name`, `Population_Count`) VALUES (4, 'Canada', 8530);
+            INSERT IGNORE INTO `colony` (`Name`, `Population_Count`) VALUES ('Budapesht', 1200);
+        </sql>
+    </changeSet>
+
+    <changeSet id="Adding New Default Colony with name Italy" author="Vlad">
+        <sql>
+            INSERT IGNORE INTO `colony` (`Name`, `Population_Count`) VALUES ('Italy', 3210);
         </sql>
     </changeSet>
 

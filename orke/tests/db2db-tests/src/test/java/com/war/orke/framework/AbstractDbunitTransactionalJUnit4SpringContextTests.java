@@ -14,6 +14,22 @@ import org.springframework.test.context.transaction.AfterTransaction;
 import javax.sql.DataSource;
 import java.lang.reflect.Method;
 
+/**
+ * Main class, that must be extended by test class, which want to use DBUnit for db2db testing.
+ *
+ * Test method must have annotating {@link DbunitDataSets} with 'before' and 'after' properties:
+ *
+ * 1) 'before' - path to xml file, which contains tables and data in it, that will be initialized before test running.
+ *      Method 'beforeTestMethod' in {@link DbunitTestExecutionListener} process that.
+ * 2) 'after' = path to xml file, which contains tables and data in it, that expected after test running
+ *      Method 'assertAfterTransaction' in {@link AbstractDbunitTransactionalJUnit4SpringContextTests}
+ *      compares actual data after test running and expected data, which is in xml file by path by property 'after'.
+ * Also, Test class must be annotated by @Rollback(false), or test running will be ignored.
+ *
+ * @see DbunitDataSets
+ * @see DbunitTestExecutionListener
+ * @see AbstractDbunitTransactionalJUnit4SpringContextTests
+ * */
 @TestExecutionListeners(AbstractDbunitTransactionalJUnit4SpringContextTests.DbunitTestExecutionListener.class)
 public abstract class AbstractDbunitTransactionalJUnit4SpringContextTests
         extends AbstractTransactionalJUnit4SpringContextTests {

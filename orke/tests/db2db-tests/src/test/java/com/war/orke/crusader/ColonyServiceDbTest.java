@@ -14,6 +14,12 @@ import org.springframework.test.annotation.Rollback;
 
 import java.math.BigInteger;
 
+/**
+ * Run application with in-memory database H2 by using {@link H2EmbeddedSpringApplication}
+ * to be closer to real project
+ *
+ * @see H2EmbeddedSpringApplication
+ * */
 @Rollback(false)
 @SpringBootTest(classes = H2EmbeddedSpringApplication.class)
 @TestMethodOrder(value = MethodOrderer.Alphanumeric.class)
