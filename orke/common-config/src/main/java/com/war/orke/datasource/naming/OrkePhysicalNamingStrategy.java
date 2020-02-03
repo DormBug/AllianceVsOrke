@@ -12,6 +12,17 @@ import java.util.Locale;
 
 import static java.lang.Character.toUpperCase;
 
+/**
+ * Strategy need for changing table and column naming by entity name.
+ * Without adding property 'table' in @Entity - our custom strategy will do it for us
+ *
+ * If class with name 'ColonyInfo' will be annotated by @Entity and our context will find and scan it,
+ * then our table in database will be named like 'colony_info'
+ *
+ * And if field with name 'colonyProperties' of this class will be annotated by @Column,
+ * then in table will be created column with name 'Colony_Properties'
+ *
+ * */
 public class OrkePhysicalNamingStrategy implements PhysicalNamingStrategy {
 
     @Override

@@ -28,9 +28,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.apiguardian.api.API.Status.EXPERIMENTAL;
 import static org.junit.jupiter.api.Assertions.fail;
 
+/**
+ * This runner was created for optimize performance by running tests not in sequence but in parallel.
+ * By this class we can easy create 100 and more requests and watch, how many time our project will be process them
+ * and also it in twice quicker than run tests in sequence (but tests mustn't interact with each other).
+ *
+ * */
 public class SpringApplicationParallelRunner implements BeforeAllCallback {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringApplicationParallelRunner.class);

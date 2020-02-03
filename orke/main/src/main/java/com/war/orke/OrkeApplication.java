@@ -9,12 +9,16 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
+/**
+ * This is main class for module 'orke' that deploys on port and with using MariaDB, which properties are
+ * in application.properties. {@link EnableAspectJAutoProxy} using there for including AOP. Now we have main
+ * aspect com.war.orke.aspect.DtoValidatorAspect
+ * */
 @SpringBootApplication(scanBasePackages = {"com.war.orke"})
 @EntityScan(basePackages = {"com.war.orke.entity"})
 @EnableJpaRepositories(basePackages = {"com.war.orke.repository"})
 @EnableAspectJAutoProxy
 @EnableScheduling
-//@EnableDiscoveryClient
 public class OrkeApplication {
 
     private static final Logger LOG = LoggerFactory.getLogger(OrkeApplication.class);

@@ -13,6 +13,12 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.net.URL;
 
+/**
+ * This class process beans, which have fields annotated by {@link InjectSQLQuery} with path
+ * to .sql file with query
+ *
+ * @see InjectSQLQuery
+ * */
 public class InjectSQLQueryAnnotationProcessor implements BeanPostProcessor {
 
     private static final String DEFAULT_JDBC_REPO_PACKAGE = "com.war.orke.jdbcRepository";

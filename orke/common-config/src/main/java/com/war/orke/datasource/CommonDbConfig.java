@@ -21,6 +21,14 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
 
+/**
+ * Main config, that create connection to database by properties in application.properties file
+ * and also create beans for run sql queries not using JPA - {@link JdbcTemplate}, {@link NamedParameterJdbcTemplate}
+ * Includes support for transactions.
+ *
+ * @see JdbcTemplate
+ * @see NamedParameterJdbcTemplate
+ * */
 @Configuration
 @EnableTransactionManagement
 @PropertySource(value = {"classpath:hibernate.properties"})

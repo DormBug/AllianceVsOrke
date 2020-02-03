@@ -10,6 +10,11 @@ import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
+/**
+ * Main class for test context running with in-memory H2 database. If we will be wanted to check our project
+ * by working in another database or test it - we can easy change properties in application.properties file
+ * and run our tests.
+ * */
 @SpringBootApplication(
         scanBasePackages = {"com.war.orke"},
         exclude = {

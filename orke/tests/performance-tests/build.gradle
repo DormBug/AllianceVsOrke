@@ -9,7 +9,3 @@ dependencies {
 
     testCompile project (':orke:tests:tests-common')
 }
-
-task PerformanceTesting(type: Test) {
-    include 'com/war/orke/colony/*LoadTest*'
-}
